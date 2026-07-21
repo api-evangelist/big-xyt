@@ -1,0 +1,114 @@
+aid: big-xyt
+name: big xyt
+review:
+  question: Does big xyt (xyt) expose a publicly documented, self-serve API surface?
+  answer: false
+  date: '2026-07-21'
+  reviewer: API Evangelist
+findings:
+  summary: |
+    big xyt AG (Frankfurt am Main, HRB 109469, majority employee-owned; rebranded
+    to "xyt" with big-xyt.com now 301-redirecting to xyt.one) is a sales-gated
+    institutional market data analytics vendor, not an API-first self-serve one.
+    It publicly NAMES three API products on its GitHub Pages landing site
+    (xythub.github.io): the big xyt API, the Liquidity Cockpit API, and the TCA
+    API. However, every deep documentation link points into docs.big-xyt.com,
+    which is a login-gated portal - the root serves a "Login | big xyt
+    documentation" page and all three per-product API doc paths return HTTP 403
+    to unauthenticated requests. No base URLs, endpoint references, or
+    OpenAPI/Swagger/AsyncAPI specs are publicly downloadable anywhere we probed,
+    and no api.big-xyt.com or developer.big-xyt.com host resolves. Commercial
+    posture is book-a-demo / contact sales (support@big-xyt.com, platform login
+    at platform.xyt.one); there is no self-serve signup, no public pricing page,
+    no terms-of-service page, and no status page found. Historical provenance:
+    the pre-2023 public docs (repo history was squashed 2023-02-10 with commit
+    "Removed history"; a 2018 fork, vekonyz/xythub.github.io, preserves the old
+    pages) documented an HTTPS REST API authenticated with OAuth 2.0 Resource
+    Owner Password Credentials bearer tokens, using a length-prefixed Google
+    Protocol Buffers v3 wire format for requests/responses, with official client
+    libraries for Python, R, Java, and C#. That transport detail is legacy and
+    is not confirmed against the current gated docs. The catalog entry therefore
+    records identity plus the three named-but-gated API products, with no
+    fabricated base URLs and no harvested specs.
+  developerPortal: https://xythub.github.io/
+  selfServe: false
+  salesGated: true
+  authModel: |
+    Not publicly documented today (docs gated). Legacy 2018 public docs
+    described OAuth 2.0 password-grant bearer tokens; current model unverified.
+  deliveryChannels:
+    - protocol: REST
+      scheme: https
+      documented: false
+      note: |
+        Implied by product copy ("single API", "API access to tick data") and
+        explicitly documented in legacy 2018 public docs (REST + Protocol
+        Buffers payloads); current public docs are login-gated so the live
+        transport is unverified.
+    - protocol: WebSocket
+      documented: false
+      note: No public mention of WebSocket, FIX, multicast, or flat-file delivery found.
+  openapi:
+    available: false
+    note: No public OpenAPI/Swagger/AsyncAPI artifact found on docs pages, GitHub org (github.com/xythub has only the docs-site repo), or common spec paths. Nothing harvested; openapi/ intentionally absent.
+  probes:
+    - url: https://big-xyt.com
+      status: 301 -> https://xyt.one/ (200)
+    - url: https://xyt.one/
+      status: 200
+    - url: https://xythub.com
+      status: 200 (redirects to https://xyt.one/)
+    - url: https://xythub.github.io/
+      status: 200
+    - url: https://xyt-hub.github.io/
+      status: 200 (redirect page to xythub.github.io)
+    - url: https://docs.big-xyt.com/
+      status: 200 (login page only)
+    - url: https://docs.big-xyt.com/en/api/api
+      status: 403
+    - url: https://docs.big-xyt.com/en/security-analytics/api
+      status: 403
+    - url: https://docs.big-xyt.com/en/execution-analytics/api
+      status: 403
+    - url: https://developer.big-xyt.com
+      status: no DNS resolution
+    - url: https://api.big-xyt.com
+      status: no DNS resolution
+    - url: https://liquidity-cockpit.com/
+      status: 200
+    - url: https://platform.xyt.one
+      status: 200 (member login)
+    - url: https://xythub.github.io/support.html
+      status: 200
+    - url: https://xyt.one/insights
+      status: 200
+    - url: https://xyt.one/privacy-policy
+      status: 200
+    - url: https://xyt.one/imprint
+      status: 200 (Big-xyt AG, Kettenhofweg 55, 60325 Frankfurt am Main; Amtsgericht Frankfurt HRB 109469)
+    - url: https://www.linkedin.com/company/big-xyt/
+      status: 200
+sources:
+  - url: https://xythub.github.io/
+    type: Portal
+    note: Public API landing page naming the big xyt API, Liquidity Cockpit API, and TCA API; banner says documentation moved to docs.big-xyt.com.
+  - url: https://xyt.one/
+    type: Website
+    note: Product, coverage (120+ venues, 12bn+ messages/day, 10 years history), ownership (majority employee-owned, independent), and rebrand facts.
+  - url: https://xyt.one/imprint
+    type: Imprint
+    note: Legal entity Big-xyt AG, Frankfurt am Main registration details.
+  - url: https://github.com/xythub/xythub.github.io
+    type: GitHubRepository
+    note: Current docs-site repo; history squashed 2023-02-10 ("Removed history").
+  - url: https://github.com/vekonyz/xythub.github.io
+    type: GitHubRepository
+    note: 2018 fork preserving legacy public API docs (OAuth 2.0 password grant, REST + Protocol Buffers, Python/R/Java/C# libraries). Legacy provenance only, not harvested as current.
+actions:
+  openapiPath: null
+  apisYmlUpdated: true
+  reason: |
+    Sales-gated posture documented honestly: three named API products recorded
+    with their (gated) documentation URLs as humanURL, no baseURL invented, no
+    spec fabricated. Enrichment should revisit if docs.big-xyt.com ever opens
+    up or a spec surfaces.

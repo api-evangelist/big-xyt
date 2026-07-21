@@ -1,0 +1,109 @@
+aid: big-xyt
+url: https://raw.githubusercontent.com/api-evangelist/big-xyt/refs/heads/main/apis.yml
+name: big xyt
+kind: company
+description: big xyt AG (now branded simply xyt, with big-xyt.com redirecting to xyt.one)
+  is an independent, majority employee-owned market data analytics firm headquartered
+  in Frankfurt am Main, Germany. It sells tick-data-driven market intelligence covering
+  equities, ETFs, listed derivatives, FX, and fixed income across 120+ venues, processing
+  12bn+ messages per day with roughly ten years of history at nanosecond precision
+  and market-by-order granularity. Products include the Liquidity Cockpit (market
+  share and liquidity analytics), Transaction Cost Analysis against its SMART benchmark,
+  pre-trade cost modeling, a Datashop of analysis-ready datasets and APIs, and an
+  xyt AI natural-language query layer. Three API products are publicly named - the
+  big xyt API, Liquidity Cockpit API, and TCA API - but their reference documentation
+  sits behind a login at docs.big-xyt.com (HTTP 403 unauthenticated), and access is
+  sales-gated via a book-a-demo motion with no self-serve signup, public pricing,
+  or public OpenAPI.
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+tags:
+- Financial
+- Market Data
+- Tick Data
+- Trading
+- Analytics
+- Equities
+- ETFs
+- Transaction Cost Analysis
+- Liquidity
+- Order Book
+created: '2026-07-21'
+modified: '2026-07-21'
+specificationVersion: '0.19'
+apis:
+- aid: big-xyt:big-xyt-api
+  name: big xyt API
+  tags:
+  - Tick Data
+  - Market Data
+  - Analytics
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.big-xyt.com/en/api/api
+  properties:
+  - url: https://docs.big-xyt.com/en/api/api
+    type: Documentation
+  - url: https://xythub.github.io/
+    type: Portal
+  description: The core big xyt (xyt hub) API gives trading firms and exchanges programmatic
+    access to normalised and raw tick data and analytics across 120+ venues without
+    in-house tick data infrastructure. Publicly listed on the xythub.github.io landing
+    page, but the reference documentation at docs.big-xyt.com is login-gated (HTTP
+    403 unauthenticated), so endpoints and base URLs are not publicly documented.
+    Legacy public docs (2018, github.com/xythub) described an HTTPS REST service using
+    OAuth 2.0 password-grant bearer tokens with Protocol Buffers payloads and official
+    Python, R, Java, and C# client libraries.
+- aid: big-xyt:liquidity-cockpit-api
+  name: Liquidity Cockpit API
+  tags:
+  - Liquidity
+  - Market Share
+  - Equities
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.big-xyt.com/en/security-analytics/api
+  properties:
+  - url: https://docs.big-xyt.com/en/security-analytics/api
+    type: Documentation
+  - url: https://liquidity-cockpit.com/
+    type: Website
+  description: API access to the Liquidity Cockpit, big xyt's dark and lit liquidity,
+    market share, and market quality analytics for navigating fragmented equity market
+    structure. Publicly named on the xythub.github.io landing page with a product
+    site at liquidity-cockpit.com, but the API reference at docs.big-xyt.com is login-gated
+    (HTTP 403 unauthenticated), so no endpoints or base URL are publicly documented.
+- aid: big-xyt:tca-api
+  name: TCA API
+  tags:
+  - Transaction Cost Analysis
+  - Execution Analytics
+  - Best Execution
+  image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
+  humanURL: https://docs.big-xyt.com/en/execution-analytics/api
+  properties:
+  - url: https://docs.big-xyt.com/en/execution-analytics/api
+    type: Documentation
+  description: Execution analytics API spanning basic Transaction Cost Analysis -
+    benchmarking trades and orders for best execution, compliance, and client reporting
+    - through full API access to quantitative modelling functions for exchanges and
+    sell-side and buy-side analysts. Publicly named on the xythub.github.io landing
+    page, but the API reference at docs.big-xyt.com is login-gated (HTTP 403 unauthenticated),
+    so no endpoints or base URL are publicly documented.
+common:
+- type: Website
+  url: https://xyt.one/
+- type: Portal
+  url: https://xythub.github.io/
+- type: Documentation
+  url: https://docs.big-xyt.com/
+- type: GitHubOrganization
+  url: https://github.com/xythub
+- type: LinkedIn
+  url: https://www.linkedin.com/company/big-xyt/
+- type: Blog
+  url: https://xyt.one/insights
+- type: PrivacyPolicy
+  url: https://xyt.one/privacy-policy
+- type: Support
+  url: https://xythub.github.io/support.html
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com
