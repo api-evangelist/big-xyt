@@ -1,0 +1,46 @@
+generated: '2026-07-22'
+method: searched
+source: live probes of /.well-known/ on all public big xyt hosts
+note: |
+  No well-known discovery documents are published on any big xyt host. All
+  probes below missed. liquidity-cockpit.com returns HTTP 200 for every
+  /.well-known/ path, but the body is the Angular SPA HTML shell (catch-all
+  route), not a real document — recorded as spa-shell, not a hit. big-xyt.com
+  301-redirects everything to xyt.one. docs.big-xyt.com is login-gated and
+  returns 403 for all paths unauthenticated.
+hosts:
+- host: https://xyt.one
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+- host: https://big-xyt.com
+  documents:
+  - {path: /.well-known/security.txt, status: 301, note: redirects to xyt.one (404)}
+  - {path: /.well-known/openid-configuration, status: 301, note: redirects to xyt.one (404)}
+  - {path: /.well-known/oauth-authorization-server, status: 301, note: redirects to xyt.one (404)}
+  - {path: /.well-known/api-catalog, status: 301, note: redirects to xyt.one (404)}
+  - {path: /.well-known/ai-plugin.json, status: 301, note: redirects to xyt.one (404)}
+- host: https://docs.big-xyt.com
+  documents:
+  - {path: /.well-known/security.txt, status: 403, note: login-gated portal}
+  - {path: /.well-known/openid-configuration, status: 403, note: login-gated portal}
+  - {path: /.well-known/oauth-authorization-server, status: 403, note: login-gated portal}
+  - {path: /.well-known/api-catalog, status: 403, note: login-gated portal}
+  - {path: /.well-known/ai-plugin.json, status: 403, note: login-gated portal}
+- host: https://liquidity-cockpit.com
+  documents:
+  - {path: /.well-known/security.txt, status: 200, note: 'spa-shell: SPA catch-all returns HTML app shell, not a security.txt'}
+  - {path: /.well-known/openid-configuration, status: 200, note: 'spa-shell: SPA catch-all returns HTML app shell, not OIDC discovery'}
+  - {path: /.well-known/oauth-authorization-server, status: 200, note: 'spa-shell: SPA catch-all returns HTML app shell'}
+  - {path: /.well-known/api-catalog, status: 200, note: 'spa-shell: SPA catch-all returns HTML app shell'}
+  - {path: /.well-known/ai-plugin.json, status: 200, note: 'spa-shell: SPA catch-all returns HTML app shell'}
+- host: https://platform.xyt.one
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}

@@ -1,0 +1,31 @@
+# big xyt
+
+> big xyt AG (branded xyt; big-xyt.com redirects to xyt.one) is an independent, majority employee-owned market data analytics firm in Frankfurt am Main, Germany. It provides tick-data-driven analytics across equities, ETFs, listed derivatives, FX, and fixed income covering 120+ venues, processing 12bn+ messages per day with ~10 years of nanosecond-precision, market-by-order history. Products include the Liquidity Cockpit, Transaction Cost Analysis (SMART benchmark), pre-trade cost modeling, a Datashop, and the xyt AI natural-language query layer.
+
+Important: big xyt names three API products publicly, but their reference documentation at docs.big-xyt.com is login-gated (HTTP 403 unauthenticated). There is no public OpenAPI, no self-serve signup, and no public pricing; access is via a book-a-demo / contact-sales motion. Legacy public docs (2018) described an HTTPS REST service using OAuth 2.0 password-grant bearer tokens with length-prefixed Protocol Buffers v3 payloads and official Python, R, Java, and C# client libraries.
+
+## APIs
+
+- [big xyt API](https://docs.big-xyt.com/en/api/api): Programmatic access to normalised and raw tick data and analytics across 120+ venues (docs login-gated)
+- [Liquidity Cockpit API](https://docs.big-xyt.com/en/security-analytics/api): Dark and lit liquidity, market share, and market quality analytics (docs login-gated)
+- [TCA API](https://docs.big-xyt.com/en/execution-analytics/api): Transaction Cost Analysis and execution analytics for best execution and compliance (docs login-gated)
+
+## Docs
+
+- [API landing page (xyt hub)](https://xythub.github.io/): Public page naming the three API products
+- [Documentation portal](https://docs.big-xyt.com/): Login-gated documentation root
+- [Company site](https://xyt.one/): Products, coverage, and company facts
+- [Liquidity Cockpit](https://liquidity-cockpit.com/): Product site
+- [Support](https://xythub.github.io/support.html): Support contact (support@big-xyt.com)
+- [Insights blog](https://xyt.one/insights): Company blog
+- [GitHub organization](https://github.com/xythub): Docs-site repo only
+
+## Specs
+
+- No public OpenAPI, AsyncAPI, GraphQL, or Protobuf contract is published; the API contract file (Protocol Buffers) is delivered to customers with the service.
+
+## Catalog
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/big-xyt/refs/heads/main/apis.yml): APIs.json index for this provider
+- [Authentication profile](https://raw.githubusercontent.com/api-evangelist/big-xyt/refs/heads/main/authentication/big-xyt-authentication.yml): Legacy-documented OAuth 2.0 password-grant profile
+- [Domain security](https://raw.githubusercontent.com/api-evangelist/big-xyt/refs/heads/main/security/big-xyt-domain-security.yml): TLS/HSTS/SPF/DMARC probe results

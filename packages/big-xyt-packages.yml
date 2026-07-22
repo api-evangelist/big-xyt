@@ -1,0 +1,41 @@
+generated: '2026-07-22'
+method: searched
+source: npm, PyPI, Maven Central, NuGet, CRAN, RubyGems, Packagist, crates.io, pkg.go.dev, github.com/xythub
+note: |
+  No first-party big xyt / xyt hub client libraries are published to any public
+  package registry. Registry probes all missed: PyPI xythub (404), PyPI big-xyt
+  (404), npm xythub (404), NuGet xythub (0 hits), Maven Central xythub (0 hits),
+  CRAN xythub (404). The PyPI package "xyt" (GPS mobility data, by
+  Marc-Edouard Schultheiss) is unrelated to big xyt AG. The legacy 2018 public
+  docs (preserved at github.com/vekonyz/xythub.github.io) documented official
+  Python, R, Java, and C# "xyt hub" client libraries, but they were distributed
+  as customer-delivered archive files (e.g. "pip install xyt-hub-X.Y.Z.tar.gz"),
+  never via public registries, and the current github.com/xythub org contains
+  only the docs-site repo. Current SDK distribution, if any, sits behind the
+  login-gated docs.big-xyt.com portal.
+packages: []
+legacy_libraries:
+- language: python
+  name: xyt-hub
+  distribution: customer-delivered tarball (pip install xyt-hub-X.Y.Z.tar.gz)
+  official: true
+  status: legacy-2018-docs
+  source: https://github.com/vekonyz/xythub.github.io/blob/master/pages/xyt/lib_python.md
+- language: r
+  name: xyt hub R library
+  distribution: customer-delivered archive
+  official: true
+  status: legacy-2018-docs
+  source: https://github.com/vekonyz/xythub.github.io/blob/master/pages/xyt/lib_r.md
+- language: java
+  name: xyt hub Java library
+  distribution: customer-delivered archive
+  official: true
+  status: legacy-2018-docs
+  source: https://github.com/vekonyz/xythub.github.io/blob/master/pages/xyt/lib_java.md
+- language: csharp
+  name: xyt hub C# library
+  distribution: customer-delivered archive
+  official: true
+  status: legacy-2018-docs
+  source: https://github.com/vekonyz/xythub.github.io/blob/master/pages/xyt/lib_csharp.md

@@ -1,0 +1,35 @@
+generated: '2026-07-22'
+method: searched
+source: https://github.com/vekonyz/xythub.github.io/blob/master/pages/xyt/api_overview.md
+docs: https://docs.big-xyt.com/en/api/api
+status: legacy-documented
+note: |
+  The current API reference at docs.big-xyt.com is login-gated (HTTP 403
+  unauthenticated), so the live authentication model cannot be verified. This
+  profile is captured from the last PUBLIC documentation of the xyt hub API
+  (2018, preserved in the vekonyz fork of xythub.github.io after the official
+  repo's history was squashed in 2023). It documented OAuth 2.0 Resource Owner
+  Password Credentials grant issuing bearer tokens: POST to
+  AUTH_SERVICE_URL/oauth/token with HTTP basic client credentials
+  (client_id "xyt" + a service secret) and grant_type=password plus
+  username/password form fields; the JSON response returned access_token,
+  token_type bearer, expires_in ~43199 seconds (12h), scope "read". Every API
+  request then carries "Authorization: Bearer TOKEN". Requests/responses used a
+  length-prefixed Protocol Buffers v3 binary wire format. Treat as legacy
+  provenance until the gated current docs can be verified.
+summary:
+  types: [oauth2]
+  oauth2_flows: [password]
+  token_type: bearer
+  token_lifetime_seconds: 43199
+  scopes_observed: [read]
+schemes:
+- name: xytHubOAuth2
+  type: oauth2
+  flow: password
+  token_url: '{AUTH_SERVICE_URL}/oauth/token'
+  client_authentication: HTTP basic (client_id "xyt" + service secret)
+  token_usage: 'Authorization: Bearer {access_token}'
+  status: legacy-2018-docs, unverified against current gated documentation
+  sources:
+  - https://github.com/vekonyz/xythub.github.io/blob/master/pages/xyt/api_overview.md
