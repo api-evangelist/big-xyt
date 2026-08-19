@@ -40,7 +40,7 @@ tags:
 - Order Book
 created: '2026-07-21'
 modified: '2026-07-22'
-specificationVersion: '0.19'
+specificationVersion: '0.23'
 apis:
 - aid: big-xyt:big-xyt-api
   name: big xyt API
