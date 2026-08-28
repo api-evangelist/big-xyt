@@ -15,6 +15,17 @@ description: big xyt AG (now branded simply xyt, with big-xyt.com redirecting to
   sits behind a login at docs.big-xyt.com (HTTP 403 unauthenticated), and access is
   sales-gated via a book-a-demo motion with no self-serve signup, public pricing,
   or public OpenAPI.
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: unknown
