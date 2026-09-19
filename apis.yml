@@ -44,6 +44,17 @@ tags:
 - Tick Data
 - Trading
 - Analytics
+- Stocks
+- ETFs
+- Transaction Cost Analysis
+- Liquidity
+- Order Book
+tags_raw:
+- Financial
+- Market Data
+- Tick Data
+- Trading
+- Analytics
 - Equities
 - ETFs
 - Transaction Cost Analysis
@@ -77,6 +88,10 @@ apis:
 - aid: big-xyt:liquidity-cockpit-api
   name: Liquidity Cockpit API
   tags:
+  - Liquidity
+  - Market Share
+  - Stocks
+  tags_raw:
   - Liquidity
   - Market Share
   - Equities
