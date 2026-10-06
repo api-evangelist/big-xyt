@@ -61,7 +61,7 @@ tags_raw:
 - Liquidity
 - Order Book
 created: '2026-07-21'
-modified: '2026-07-22'
+modified: '2026-10-06'
 specificationVersion: '0.23'
 apis:
 - aid: big-xyt:big-xyt-api
@@ -125,6 +125,10 @@ apis:
     page, but the API reference at docs.big-xyt.com is login-gated (HTTP 403 unauthenticated),
     so no endpoints or base URL are publicly documented.
 common:
+- url: https://xyt.one/blog
+  type: Blog
+- url: https://xyt.one/blog/rss.xml
+  type: BlogRSS
 - type: DomainSecurity
   url: security/big-xyt-domain-security.yml
 - type: Authentication
