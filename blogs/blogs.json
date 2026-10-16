@@ -2,10 +2,27 @@
   "repo": "big-xyt",
   "feeds": [
     {
-      "source": "https://www.linkedin.com/company/big-xyt/",
-      "error": "HTTPError"
+      "source": "https://xyt.one/blog",
+      "feed_url": "https://xyt.one/blog/rss.xml",
+      "title": "",
+      "saved": 2,
+      "method": "discovered"
+    },
+    {
+      "source": "https://xyt.one/blog/rss.xml",
+      "feed_url": "https://xyt.one/blog/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://xyt.one/insights",
+      "feed_url": "https://xyt.one/insights",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
-  "post_count": 0,
-  "fetched": "2026-10-03T12:30:02Z"
+  "post_count": 2,
+  "fetched": "2026-10-10T13:15:00Z"
 }
