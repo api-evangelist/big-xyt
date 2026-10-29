@@ -1,4 +1,4 @@
-# big xyt (big-xyt)
+# big xyt
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,92 +64,91 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-big xyt AG (now branded simply xyt, with big-xyt.com redirecting to xyt.one) is an independent, majority employee-owned market data analytics firm headquartered in Frankfurt am Main, Germany. It sells tick-data-driven market intelligence covering equities, ETFs, listed derivatives, FX, and fixed income across 120+ venues, processing 12bn+ messages per day with roughly ten years of history at nanosecond precision and market-by-order granularity. Products include the Liquidity Cockpit, Transaction Cost Analysis against its SMART benchmark, pre-trade cost modeling, a Datashop of analysis-ready datasets and APIs, and an xyt AI natural-language query layer. Three API products are publicly named — the big xyt API, Liquidity Cockpit API, and TCA API — but their reference documentation sits behind a login at docs.big-xyt.com (HTTP 403 unauthenticated), and access is sales-gated via a book-a-demo motion with no self-serve signup, public pricing, or public OpenAPI.
+big xyt AG (now branded simply xyt, with big-xyt.com redirecting to xyt.one) is an independent, majority employee-owned market data analytics firm headquartered in Frankfurt am Main, Germany. It sells tick-data-driven market intelligence covering equities, ETFs, listed derivatives, FX, and fixed income across 120+ venues, processing 12bn+ messages per day with roughly ten years of history at nanosecond precision and market-by-order granularity. Products include the Liquidity Cockpit (market share and liquidity analytics), Transaction Cost Analysis against its SMART benchmark, pre-trade cost modeling, a Datashop of analysis-ready datasets and APIs, and an xyt AI natural-language query layer. Three API products are publicly named - the big xyt API, Liquidity Cockpit API, and TCA API - but their reference documentation sits behind a login at docs.big-xyt.com (HTTP 403 unauthenticated), and access is sales-gated via a book-a-demo motion with no self-serve signup, public pricing, or public OpenAPI.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/big-xyt/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/big-xyt/refs/heads/main/apis.yml)
+**Areas:** Finance · Market Data · Tick Data · Trading · Analytics · Stocks · ETFs · Transaction Cost Analysis · Liquidity · Order Book
 
-## Tags
+## big xyt on APIs.io
 
-- Financial
-- Market Data
-- Tick Data
-- Trading
-- Analytics
-- Equities
-- ETFs
-- Transaction Cost Analysis
-- Liquidity
-- Order Book
+Everything profiled for big xyt is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/big-xyt/](https://apis.io/providers/big-xyt/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (3)
 
-- **Created:** 2026-07-21
-- **Modified:** 2026-07-21
+- [big xyt API](https://apis.io/apis/big-xyt/big-xyt-api/) — The core big xyt (xyt hub) API gives trading firms and exchanges programmatic access to normalised and raw tick data and analytics across 120+ venues…
+- [Liquidity Cockpit API](https://apis.io/apis/big-xyt/liquidity-cockpit-api/) — API access to the Liquidity Cockpit, big xyt's dark and lit liquidity, market share, and market quality analytics for navigating fragmented equity market…
+- [TCA API](https://apis.io/apis/big-xyt/tca-api/) — Execution analytics API spanning basic Transaction Cost Analysis - benchmarking trades and orders for best execution, compliance, and client reporting -…
 
-## APIs
+### Published properties
 
-### big xyt API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-The core big xyt (xyt hub) API gives trading firms and exchanges programmatic access to normalised and raw tick data and analytics across 120+ venues without in-house tick data infrastructure. Publicly listed on the xythub.github.io landing page, but the reference documentation at docs.big-xyt.com is login-gated (HTTP 403 unauthenticated), so endpoints and base URLs are not publicly documented. Legacy public docs (2018, github.com/xythub) described an HTTPS REST service using OAuth 2.0 password-grant bearer tokens with Protocol Buffers payloads and official Python, R, Java, and C# client libraries.
+#### Security (2)
 
-- **Human URL:** [https://docs.big-xyt.com/en/api/api](https://docs.big-xyt.com/en/api/api)
+Authentication, trust centre, and vulnerability disclosure.
 
-#### Tags
+- [Big Xyt Authentication](https://apis.io/security/big-xyt/big-xyt-authentication/)
+- [Big Xyt Domain Security](https://apis.io/security/big-xyt/big-xyt-domain-security/)
 
-- Tick Data
-- Market Data
-- Analytics
+## Where to find this API
 
-#### Properties
-
-- [Documentation](https://docs.big-xyt.com/en/api/api) (login-gated)
-- [Portal](https://xythub.github.io/)
-
-### Liquidity Cockpit API
-
-API access to the Liquidity Cockpit, big xyt's dark and lit liquidity, market share, and market quality analytics for navigating fragmented equity market structure. Publicly named on the xythub.github.io landing page with a product site at liquidity-cockpit.com, but the API reference at docs.big-xyt.com is login-gated (HTTP 403 unauthenticated), so no endpoints or base URL are publicly documented.
-
-- **Human URL:** [https://docs.big-xyt.com/en/security-analytics/api](https://docs.big-xyt.com/en/security-analytics/api)
-
-#### Tags
-
-- Liquidity
-- Market Share
-- Equities
-
-#### Properties
-
-- [Documentation](https://docs.big-xyt.com/en/security-analytics/api) (login-gated)
-- [Website](https://liquidity-cockpit.com/)
-
-### TCA API
-
-Execution analytics API spanning basic Transaction Cost Analysis — benchmarking trades and orders for best execution, compliance, and client reporting — through full API access to quantitative modelling functions for exchanges and sell-side and buy-side analysts. Publicly named on the xythub.github.io landing page, but the API reference at docs.big-xyt.com is login-gated (HTTP 403 unauthenticated), so no endpoints or base URL are publicly documented.
-
-- **Human URL:** [https://docs.big-xyt.com/en/execution-analytics/api](https://docs.big-xyt.com/en/execution-analytics/api)
-
-#### Tags
-
-- Transaction Cost Analysis
-- Execution Analytics
-- Best Execution
-
-#### Properties
-
-- [Documentation](https://docs.big-xyt.com/en/execution-analytics/api) (login-gated)
-
-## Common Properties
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
 
 - [Website](https://xyt.one/)
-- [Portal](https://xythub.github.io/)
-- [Documentation](https://docs.big-xyt.com/) (login-gated)
-- [GitHub Organization](https://github.com/xythub)
-- [LinkedIn](https://www.linkedin.com/company/big-xyt/)
-- [Blog](https://xyt.one/insights)
-- [Privacy Policy](https://xyt.one/privacy-policy)
+- [Documentation](https://docs.big-xyt.com/)
 - [Support](https://xythub.github.io/support.html)
+- [Blog](https://xyt.one/blog)
+- [Privacy policy](https://xyt.one/privacy-policy)
+- [GitHub](https://github.com/xythub)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** Kin Lane
-**Email:** kin@apievangelist.com
+**Kin Score 17.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 69.6 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 38.1 |
+| Access clarity | 17.1 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 14.8** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/big-xyt/](https://apis.io/providers/big-xyt/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for big xyt: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/big-xyt/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
